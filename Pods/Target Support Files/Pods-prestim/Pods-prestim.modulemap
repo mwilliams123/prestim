@@ -1,0 +1,6 @@
+framework module Pods_prestim {
+  umbrella header "Pods-prestim-umbrella.h"
+
+  export *
+  module * { export * }
+}

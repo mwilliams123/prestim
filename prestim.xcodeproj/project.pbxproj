@@ -14,6 +14,13 @@
 		1F83F8F31FECDAC800152F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F8F11FECDAC800152F80 /* LaunchScreen.storyboard */; };
 		1F83F8FE1FECDAC800152F80 /* prestimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F8FD1FECDAC800152F80 /* prestimTests.swift */; };
 		1F83F9091FECDAC800152F80 /* prestimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F9081FECDAC800152F80 /* prestimUITests.swift */; };
+		1FBB25CB1FEE08D0006879E4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25CA1FEE08D0006879E4 /* Data.swift */; };
+		1FBB25CD1FEF52AC006879E4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25CC1FEF52AC006879E4 /* CircleView.swift */; };
+		1FBB25CF1FEF6912006879E4 /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25CE1FEF6912006879E4 /* ColorCircle.swift */; };
+		1FBB25D11FEF692F006879E4 /* ColorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25D01FEF692F006879E4 /* ColorList.swift */; };
+		47BD6FF84A44ED4F78F165C1 /* Pods_prestimUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFF0F294B827871864CBC49 /* Pods_prestimUITests.framework */; };
+		61C2D42B50D81BAB466DCCF5 /* Pods_prestimTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B569F02FB97A158FECEC3D6E /* Pods_prestimTests.framework */; };
+		D497040F3CB9BB2E0F8A157E /* Pods_prestim.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5C63983E09DAAB971FC1673 /* Pods_prestim.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E073848BBA896E6409690B4 /* Pods-prestimTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prestimTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prestimTests/Pods-prestimTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F83F8E51FECDAC800152F80 /* prestim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prestim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F83F8E81FECDAC800152F80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F83F8EA1FECDAC800152F80 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,18 @@
 		1F83F9041FECDAC800152F80 /* prestimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prestimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F83F9081FECDAC800152F80 /* prestimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prestimUITests.swift; sourceTree = "<group>"; };
 		1F83F90A1FECDAC800152F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FBB25CA1FEE08D0006879E4 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		1FBB25CC1FEF52AC006879E4 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		1FBB25CE1FEF6912006879E4 /* ColorCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
+		1FBB25D01FEF692F006879E4 /* ColorList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorList.swift; sourceTree = "<group>"; };
+		22BB8603425E7DF405A8F55C /* Pods-prestim.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prestim.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prestim/Pods-prestim.debug.xcconfig"; sourceTree = "<group>"; };
+		2D27BA9D19AE814E1300DEA6 /* Pods-prestimUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prestimUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-prestimUITests/Pods-prestimUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A5C63983E09DAAB971FC1673 /* Pods_prestim.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prestim.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B569F02FB97A158FECEC3D6E /* Pods_prestimTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prestimTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1216043D76910C41CFCC96D /* Pods-prestimUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prestimUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-prestimUITests/Pods-prestimUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C78AD6D02FA20DDF432D86E3 /* Pods-prestim.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prestim.release.xcconfig"; path = "Pods/Target Support Files/Pods-prestim/Pods-prestim.release.xcconfig"; sourceTree = "<group>"; };
+		CDFF0F294B827871864CBC49 /* Pods_prestimUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_prestimUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62CAE8D8CD4D293E8F24B19 /* Pods-prestimTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-prestimTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-prestimTests/Pods-prestimTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D497040F3CB9BB2E0F8A157E /* Pods_prestim.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C2D42B50D81BAB466DCCF5 /* Pods_prestimTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47BD6FF84A44ED4F78F165C1 /* Pods_prestimUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +104,8 @@
 				1F83F8FC1FECDAC800152F80 /* prestimTests */,
 				1F83F9071FECDAC800152F80 /* prestimUITests */,
 				1F83F8E61FECDAC800152F80 /* Products */,
+				D0EB1DF811CB24056460A85E /* Pods */,
+				C59C60A5051A57871B1EC74B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +128,10 @@
 				1F83F8EF1FECDAC800152F80 /* Assets.xcassets */,
 				1F83F8F11FECDAC800152F80 /* LaunchScreen.storyboard */,
 				1F83F8F41FECDAC800152F80 /* Info.plist */,
+				1FBB25CA1FEE08D0006879E4 /* Data.swift */,
+				1FBB25CC1FEF52AC006879E4 /* CircleView.swift */,
+				1FBB25CE1FEF6912006879E4 /* ColorCircle.swift */,
+				1FBB25D01FEF692F006879E4 /* ColorList.swift */,
 			);
 			path = prestim;
 			sourceTree = "<group>";
@@ -125,6 +154,29 @@
 			path = prestimUITests;
 			sourceTree = "<group>";
 		};
+		C59C60A5051A57871B1EC74B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5C63983E09DAAB971FC1673 /* Pods_prestim.framework */,
+				B569F02FB97A158FECEC3D6E /* Pods_prestimTests.framework */,
+				CDFF0F294B827871864CBC49 /* Pods_prestimUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0EB1DF811CB24056460A85E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22BB8603425E7DF405A8F55C /* Pods-prestim.debug.xcconfig */,
+				C78AD6D02FA20DDF432D86E3 /* Pods-prestim.release.xcconfig */,
+				1E073848BBA896E6409690B4 /* Pods-prestimTests.debug.xcconfig */,
+				E62CAE8D8CD4D293E8F24B19 /* Pods-prestimTests.release.xcconfig */,
+				2D27BA9D19AE814E1300DEA6 /* Pods-prestimUITests.debug.xcconfig */,
+				C1216043D76910C41CFCC96D /* Pods-prestimUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F83F90D1FECDAC800152F80 /* Build configuration list for PBXNativeTarget "prestim" */;
 			buildPhases = (
+				3865BA9C378BD177F6159311 /* [CP] Check Pods Manifest.lock */,
 				1F83F8E11FECDAC800152F80 /* Sources */,
 				1F83F8E21FECDAC800152F80 /* Frameworks */,
 				1F83F8E31FECDAC800152F80 /* Resources */,
+				E443B259D30454CC81B63403 /* [CP] Embed Pods Frameworks */,
+				5CAA8C20F09DAF40C90A65BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F83F9101FECDAC800152F80 /* Build configuration list for PBXNativeTarget "prestimTests" */;
 			buildPhases = (
+				174D1336374D5D37D18F5518 /* [CP] Check Pods Manifest.lock */,
 				1F83F8F51FECDAC800152F80 /* Sources */,
 				1F83F8F61FECDAC800152F80 /* Frameworks */,
 				1F83F8F71FECDAC800152F80 /* Resources */,
+				B77891EC1ABAF2D9910B83A9 /* [CP] Embed Pods Frameworks */,
+				804984A17983E8F9366FFAE8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F83F9131FECDAC800152F80 /* Build configuration list for PBXNativeTarget "prestimUITests" */;
 			buildPhases = (
+				B5B269F0409F43D755A436B2 /* [CP] Check Pods Manifest.lock */,
 				1F83F9001FECDAC800152F80 /* Sources */,
 				1F83F9011FECDAC800152F80 /* Frameworks */,
 				1F83F9021FECDAC800152F80 /* Resources */,
+				AB118BE1CBBA30CC2C0083CA /* [CP] Embed Pods Frameworks */,
+				3EF44FFBE18C069D9BC5E795 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,12 +315,178 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		174D1336374D5D37D18F5518 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-prestimTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3865BA9C378BD177F6159311 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-prestim-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3EF44FFBE18C069D9BC5E795 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prestimUITests/Pods-prestimUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CAA8C20F09DAF40C90A65BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prestim/Pods-prestim-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		804984A17983E8F9366FFAE8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prestimTests/Pods-prestimTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB118BE1CBBA30CC2C0083CA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prestimUITests/Pods-prestimUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5B269F0409F43D755A436B2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-prestimUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B77891EC1ABAF2D9910B83A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prestimTests/Pods-prestimTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E443B259D30454CC81B63403 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-prestim/Pods-prestim-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognito/AWSCognito.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognito.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-prestim/Pods-prestim-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1F83F8E11FECDAC800152F80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FBB25CD1FEF52AC006879E4 /* CircleView.swift in Sources */,
 				1F83F8EB1FECDAC800152F80 /* ViewController.swift in Sources */,
+				1FBB25CF1FEF6912006879E4 /* ColorCircle.swift in Sources */,
+				1FBB25D11FEF692F006879E4 /* ColorList.swift in Sources */,
+				1FBB25CB1FEE08D0006879E4 /* Data.swift in Sources */,
 				1F83F8E91FECDAC800152F80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +639,7 @@
 		};
 		1F83F90E1FECDAC800152F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BB8603425E7DF405A8F55C /* Pods-prestim.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = prestim/Info.plist;
@@ -424,6 +652,7 @@
 		};
 		1F83F90F1FECDAC800152F80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C78AD6D02FA20DDF432D86E3 /* Pods-prestim.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = prestim/Info.plist;
@@ -436,6 +665,7 @@
 		};
 		1F83F9111FECDAC800152F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E073848BBA896E6409690B4 /* Pods-prestimTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -450,6 +680,7 @@
 		};
 		1F83F9121FECDAC800152F80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E62CAE8D8CD4D293E8F24B19 /* Pods-prestimTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -464,6 +695,7 @@
 		};
 		1F83F9141FECDAC800152F80 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D27BA9D19AE814E1300DEA6 /* Pods-prestimUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = prestimUITests/Info.plist;
@@ -477,6 +709,7 @@
 		};
 		1F83F9151FECDAC800152F80 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1216043D76910C41CFCC96D /* Pods-prestimUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = prestimUITests/Info.plist;
@@ -507,6 +740,7 @@
 				1F83F90F1FECDAC800152F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F83F9101FECDAC800152F80 /* Build configuration list for PBXNativeTarget "prestimTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +749,7 @@
 				1F83F9121FECDAC800152F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F83F9131FECDAC800152F80 /* Build configuration list for PBXNativeTarget "prestimUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +758,7 @@
 				1F83F9151FECDAC800152F80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

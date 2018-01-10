@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import AWSCore
+import AWSCognito
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+                                                                identityPoolId:"us-east-1:29e6b34a-7b33-4c71-823e-8b559b42287f")
+        
+        let configuration = AWSServiceConfiguration(region:.USEast1, credentialsProvider:credentialsProvider)
+        
+        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        
+        credentialsProvider.getIdentityId().continueWith(block: { (task) -> AnyObject? in
+            if (task.error != nil) {
+                print("Error: " + task.error!.localizedDescription)
+            }
+            else {
+                // the task result will contain the identity id
+                let cognitoId = task.result!
+                print("Cognito id: \(cognitoId)")
+            }
+            return task;
+        })
+    
         return true
     }
 

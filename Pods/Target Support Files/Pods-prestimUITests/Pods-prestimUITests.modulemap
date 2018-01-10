@@ -1,0 +1,6 @@
+framework module Pods_prestimUITests {
+  umbrella header "Pods-prestimUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
