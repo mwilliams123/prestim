@@ -35,16 +35,17 @@ class ColorCircle: UIView {
         var angle = CGFloat(0)
         let delta = CGFloat(Double.pi / 180.0)
         
-        for color in colorList {
+        for _ in 1...360 {
             let circlePath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: frame.size.width/2, startAngle: angle, endAngle: angle + delta, clockwise: true)
             
             backgroundLayer = CAShapeLayer()
             backgroundLayer.path = circlePath.cgPath
             backgroundLayer.fillColor = UIColor.clear.cgColor
-            let red = Double(color[0])/255.0
-            let green = Double(color[1])/255.0
-            let blue = Double(color[2])/255.0
-            backgroundLayer.strokeColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1).cgColor
+            let hue = angle / CGFloat(2 * Double.pi)
+            backgroundLayer.strokeColor = UIColor(hue: hue,
+                                                  saturation: 1,
+                                                  brightness: 1,
+                                                  alpha: 1).cgColor
             backgroundLayer.lineWidth = 30.0
             backgroundLayer.strokeEnd = 1.0
             layer.addSublayer(backgroundLayer)

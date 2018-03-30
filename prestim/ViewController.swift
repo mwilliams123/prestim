@@ -5,10 +5,7 @@
 //  Created by Megan Williams on 12/21/17.
 //  Copyright © 2017 Prestimulus. All rights reserved.
 //
-// TODO:
-// 2. Get appropriately colored images
-// 3. Repeat 16 times
-// 4. Other experiment
+//
 
 
 import UIKit
@@ -25,9 +22,40 @@ class ViewController: UIViewController {
     let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
                                                             identityPoolId:"us-east-1:29e6b34a-7b33-4c71-823e-8b559b42287f")
     
+    let colorWheel = ColorCircle(frame: CGRect(x: 55, y: 200, width: 300, height: 300))
+    var imageView = UIImageView(image: UIImage(named: "white"))
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let circleWidth = CGFloat(300)
+        let circleHeight = circleWidth
+        
+        let xCenter = 55 + circleWidth/2.0
+        let yCenter = 200 + circleHeight/2.0
+        var width = CGFloat(100)
+        var height = CGFloat(100)
+        imageView.frame = CGRect(x: xCenter - width/2, y: yCenter - height/2, width: width, height: height)
+        imageView.isHidden = true
+        view.addSubview(imageView)
+        
+        width = CGFloat(20)
+        height = CGFloat(20)
+        let point = UIView(frame: CGRect(x: xCenter - width/2, y: yCenter - height/2, width: width, height: height))
+        point.backgroundColor = UIColor.black
+        point.layer.cornerRadius = 10
+        view.addSubview(point)
+        
+        
+        update()
+        
+    }
+    
+    var n = 1
+    
+    func update() {
+        // Something cool
+        
         let circleWidth = CGFloat(300)
         let circleHeight = circleWidth
         let circleView = CircleView(frame: CGRect(x: 55, y: 200, width: circleWidth, height: circleHeight))
@@ -38,54 +66,83 @@ class ViewController: UIViewController {
         let yCenter = 200 + circleHeight/2.0
         
         let radius = circleView.radius!
-        let deg = Double(arc4random_uniform(360))
-        let radians = deg * Double.pi / 180.0
+        var deg = Double(arc4random_uniform(360))
+        var radians = deg * Double.pi / 180.0
         var x_pos = radius * CGFloat(cos(radians))
         var y_pos = radius * CGFloat(sin(radians))
-        let width = CGFloat(20)
-        let height = CGFloat(20)
+        var width = CGFloat(20)
+        var height = CGFloat(20)
         let point = UIView(frame: CGRect(x: xCenter + x_pos - width/2, y: yCenter + y_pos - height/2, width: width, height: height))
         point.backgroundColor = UIColor.black
+        point.layer.cornerRadius = 10
         
-        cuePoint = CGPoint(x: xCenter + x_pos, y: yCenter + y_pos)
         
         view.addSubview(point)
+        point.isHidden = true
+        
+        let perc = arc4random_uniform(100)
+        
+        width = CGFloat(100)
+        height = CGFloat(100)
+        let image1 = UIImage(named: "pic" +  String(n) + "_1")
+        let imageView1 = UIImageView(image: image1!)
+        let image2 = UIImage(named: "pic" +  String(n) + "_2")
+        let imageView2 = UIImageView(image: image2!)
+        
+        deg = Double(arc4random_uniform(360))
+        radians = deg * Double.pi / 180.0
+        let rand_pos_x = radius * CGFloat(cos(radians))
+        let rand_pos_y = radius * CGFloat(sin(radians))
+        // print(perc)
+        if perc < 75 {
+            // cue is on correct image
+            imageView1.frame = CGRect(x: xCenter + x_pos - width/2, y: yCenter + y_pos - height/2, width: width, height: height)
+            imageView2.frame = CGRect(x: xCenter + rand_pos_x - width/2, y: yCenter + rand_pos_y - height/2, width: width, height: height)
+            
+        }
+        else {
+            // cue is on incorrect image
+            imageView2.frame = CGRect(x: xCenter + x_pos - width/2, y: yCenter + y_pos - height/2, width: width, height: height)
+            imageView1.frame = CGRect(x: xCenter + rand_pos_x - width/2, y: yCenter + rand_pos_y - height/2, width: width, height: height)
+            
+        }
+        
+        view.addSubview(imageView1)
+        view.addSubview(imageView2)
+        imageView1.isHidden = true
+        imageView2.isHidden = true
+        
         
         let time = DispatchTime.now()
-        DispatchQueue.main.asyncAfter(deadline: time + .seconds(3), execute: { () -> Void in
+        DispatchQueue.main.asyncAfter(deadline: time + .seconds(2), execute: { () -> Void in
+            point.isHidden = false
+        })
+        DispatchQueue.main.asyncAfter(deadline: time + .seconds(2) + .milliseconds(250), execute: { () -> Void in
             point.isHidden = true
         })
         
-        for index in 1...3 {
-            let image = UIImage(named: "obj" + String(index))
-            let imageView = UIImageView(image: image!)
-            
-            let width = CGFloat(100)
-            let height = CGFloat(100)
-            imageView.frame = CGRect(x: xCenter + x_pos - width/2, y: yCenter + y_pos - height/2, width: width, height: height)
-            let deg = Double(arc4random_uniform(360))
-            let radians = deg * Double.pi / 180.0
-            x_pos = radius * CGFloat(cos(radians))
-            y_pos = radius * CGFloat(sin(radians))
-            view.addSubview(imageView)
-            imageView.isHidden = true
-            DispatchQueue.main.asyncAfter(deadline: time + .seconds(5), execute: { () -> Void in
-                imageView.isHidden = false
-            })
-            DispatchQueue.main.asyncAfter(deadline: time + .seconds(9), execute: { () -> Void in
-                imageView.isHidden = true
-            })
-        }
+        
+        DispatchQueue.main.asyncAfter(deadline: time + .seconds(5) , execute: { () -> Void in
+            imageView1.isHidden = false
+            imageView2.isHidden = false
+        })
+        DispatchQueue.main.asyncAfter(deadline: time + .seconds(5) + .milliseconds(500), execute: { () -> Void in
+            imageView1.isHidden = true
+            imageView2.isHidden = true
+        })
         
         
-        let colorWheel = ColorCircle(frame: CGRect(x: 55, y: 200, width: circleWidth, height: circleHeight))
         
         view.addSubview(colorWheel)
+        let image = UIImage(named: "pic" +  String(n) + "_0")
+        imageView.image = image
+        
         
         colorWheel.isHidden = true
         
-        DispatchQueue.main.asyncAfter(deadline: time + .seconds(11), execute: { () -> Void in
-            colorWheel.isHidden = false
+        DispatchQueue.main.asyncAfter(deadline: time + .seconds(8) , execute: { () -> Void in
+            self.colorWheel.isHidden = false
+            self.imageView.isHidden = false
         })
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tapCircle(_:)))
@@ -93,20 +150,39 @@ class ViewController: UIViewController {
     }
     
     func tapCircle(_ sender: UITapGestureRecognizer) {
-        print("Tapped")
+        // print("Tapped")
         let touch = sender.location(in: view)
-        let dist = pow(touch.x - cuePoint.x, 2) + pow(touch.y - cuePoint.y, 2)
-        print(dist)
+        let circleWidth = CGFloat(300)
+        let circleHeight = circleWidth
+        let xCenter = 55 + circleWidth/2.0
+        let yCenter = 200 + circleHeight/2.0
         
+        let rad = atan(( yCenter - touch.y)/(touch.x - xCenter ))
+        
+        var degree = rad * 180 / CGFloat.pi
+        if (touch.x < xCenter) {
+            degree = degree + 180
+        }
+        if degree < 0 {
+            degree = degree + 360
+        }
+        // print(degree)
+        let actual = colorList[n - 1]
+        var dist = abs(degree - CGFloat(actual))
+        if (dist > 180) {
+            dist = dist - 360
+        }
+        let s = dist.description
+        // print(s)
         let userId = credentialsProvider.identityId!
-        print(userId)
+        
         dynamoDBObjectMapper.load(Data.self, hashKey: userId, rangeKey: nil).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
             var data = Data()
             if let error = task.error as NSError? {
                 print("The request failed. Error: \(error)")
                 return nil
             } else if (task.result as? Data) != nil {
-                print("Retrieved item")
+                print("Data:")
                 // Do something with task.result.
                 data = task.result as? Data
                 print(data?._rE!)
@@ -116,7 +192,8 @@ class ViewController: UIViewController {
                 data?._rE = []
                 data?._userId = self.credentialsProvider.identityId!
             }
-            data?._rE?.append(self.textField.text ?? "Invalid")
+            
+            data?._rE?.append(s ?? "Invalid")
             self.dynamoDBObjectMapper.save(data!).continueWith(block: { (task:AWSTask<AnyObject>!) -> Any? in
                 if let error = task.error as NSError? {
                     print("The request failed. Error: \(error)")
@@ -127,6 +204,13 @@ class ViewController: UIViewController {
             })
             return nil
         })
+        self.imageView.isHidden = true
+        if (n < 16) {
+            n = n + 1
+            update()
+        }
+        
+        
 
     }
 
