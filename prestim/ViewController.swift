@@ -14,20 +14,10 @@ import AWSCognitoIdentityProvider
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var submitButton: UIButton!
     
-    var dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
-    var cuePoint: CGPoint!
-    let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
-                                                            identityPoolId:"us-east-1:29e6b34a-7b33-4c71-823e-8b559b42287f")
+    @IBOutlet weak var start: UIButton!
     
-    let colorWheel = ColorCircle(frame: CGRect(x: 55, y: 200, width: 300, height: 300))
-    var imageView = UIImageView(image: UIImage(named: "white"))
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBAction func startButton(_ sender: Any) {
         let circleWidth = CGFloat(300)
         let circleHeight = circleWidth
         
@@ -46,9 +36,25 @@ class ViewController: UIViewController {
         point.layer.cornerRadius = 10
         view.addSubview(point)
         
+        start.isHidden = true
         
         update()
-        
+
+    }
+    
+    var dynamoDBObjectMapper = AWSDynamoDBObjectMapper.default()
+    var cuePoint: CGPoint!
+    let credentialsProvider = AWSCognitoCredentialsProvider(regionType:.USEast1,
+                                                            identityPoolId:"us-east-1:29e6b34a-7b33-4c71-823e-8b559b42287f")
+    
+    let colorWheel = ColorCircle(frame: CGRect(x: 55, y: 200, width: 300, height: 300))
+    var imageView = UIImageView(image: UIImage(named: "white"))
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        start.layer.borderWidth = 1
+        start.layer.borderColor = UIColor.black.cgColor
     }
     
     var n = 1
@@ -89,8 +95,11 @@ class ViewController: UIViewController {
         let image2 = UIImage(named: "pic" +  String(n) + "_2")
         let imageView2 = UIImageView(image: image2!)
         
-        deg = Double(arc4random_uniform(360))
-        radians = deg * Double.pi / 180.0
+        var rand_deg = Double(arc4random_uniform(360))
+        while abs(deg - rand_deg) < 10 {
+            rand_deg = Double(arc4random_uniform(360))
+        }
+        radians = rand_deg * Double.pi / 180.0
         let rand_pos_x = radius * CGFloat(cos(radians))
         let rand_pos_y = radius * CGFloat(sin(radians))
         // print(perc)
@@ -170,7 +179,7 @@ class ViewController: UIViewController {
         let actual = colorList[n - 1]
         var dist = abs(degree - CGFloat(actual))
         if (dist > 180) {
-            dist = dist - 360
+            dist = abs(dist - 360)
         }
         let s = dist.description
         // print(s)
@@ -188,7 +197,7 @@ class ViewController: UIViewController {
                 print(data?._rE!)
             } else {
                 print("Not found")
-                data?._lTM = ["hello"]
+                data?._lTM = ["test"]
                 data?._rE = []
                 data?._userId = self.credentialsProvider.identityId!
             }
