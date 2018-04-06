@@ -7,6 +7,10 @@
 //
 // timing
 // formatting
+// save ltm data
+// send data at end of block
+// clean up code
+// transitions
 
 
 import UIKit
@@ -25,6 +29,12 @@ class ViewController: UIViewController {
         print(iteration)
         if iteration % 16 == 0 {
             print("Updating")
+            submitButton.isHidden = true
+            LTMMode = false
+            imageView.isHidden = true
+            circleView.isHidden = false
+            centerPoint.isHidden = false
+            colorWheel.isHidden = true
             update()
             
         }
@@ -153,7 +163,7 @@ class ViewController: UIViewController {
         imageView2.tintColor = UIColor(hue: hue2, saturation: 1, brightness: 1, alpha: 1)
         
         var rand_deg = Double(arc4random_uniform(360))
-        while abs(deg - rand_deg) < 10 {
+        while abs(deg - rand_deg) < 16 {
             rand_deg = Double(arc4random_uniform(360))
         }
         radians = rand_deg * Double.pi / 180.0
