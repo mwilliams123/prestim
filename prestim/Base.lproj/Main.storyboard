@@ -32,17 +32,31 @@
                                     <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1lp-sd-7tO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTo-t2-9u8">
+                                <rect key="frame" x="140" y="75" width="85" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uQV-Pg-ZTT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="OTo-t2-9u8" secondAttribute="trailing" constant="134" id="11T-UW-LwJ"/>
                             <constraint firstItem="yfn-V7-ewC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="250" id="2wk-sL-QhX"/>
+                            <constraint firstItem="OTo-t2-9u8" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="55" id="Mo0-2j-5vs"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yfn-V7-ewC" secondAttribute="bottom" constant="350" id="VGH-7B-hUv"/>
                             <constraint firstItem="yfn-V7-ewC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="124" id="c5Z-oC-BYJ"/>
+                            <constraint firstItem="OTo-t2-9u8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="124" id="ppH-t2-JE7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="yfn-V7-ewC" secondAttribute="trailing" constant="134" id="t0d-6m-asy"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="start" destination="yfn-V7-ewC" id="OlM-qh-g4j"/>
+                        <outlet property="submitButton" destination="OTo-t2-9u8" id="Id4-tE-KdH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

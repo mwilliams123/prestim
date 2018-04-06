@@ -14,6 +14,7 @@
 		1F83F8F31FECDAC800152F80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F83F8F11FECDAC800152F80 /* LaunchScreen.storyboard */; };
 		1F83F8FE1FECDAC800152F80 /* prestimTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F8FD1FECDAC800152F80 /* prestimTests.swift */; };
 		1F83F9091FECDAC800152F80 /* prestimUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83F9081FECDAC800152F80 /* prestimUITests.swift */; };
+		1F9D8814206E928100373D15 /* LTMController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F9D8813206E928100373D15 /* LTMController.swift */; };
 		1FBB25CB1FEE08D0006879E4 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25CA1FEE08D0006879E4 /* Data.swift */; };
 		1FBB25CD1FEF52AC006879E4 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25CC1FEF52AC006879E4 /* CircleView.swift */; };
 		1FBB25CF1FEF6912006879E4 /* ColorCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBB25CE1FEF6912006879E4 /* ColorCircle.swift */; };
@@ -55,6 +56,7 @@
 		1F83F9041FECDAC800152F80 /* prestimUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = prestimUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F83F9081FECDAC800152F80 /* prestimUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prestimUITests.swift; sourceTree = "<group>"; };
 		1F83F90A1FECDAC800152F80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F9D8813206E928100373D15 /* LTMController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMController.swift; sourceTree = "<group>"; };
 		1FBB25CA1FEE08D0006879E4 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		1FBB25CC1FEF52AC006879E4 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		1FBB25CE1FEF6912006879E4 /* ColorCircle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCircle.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			children = (
 				1F83F8E81FECDAC800152F80 /* AppDelegate.swift */,
 				1F83F8EA1FECDAC800152F80 /* ViewController.swift */,
+				1F9D8813206E928100373D15 /* LTMController.swift */,
 				1F83F8EC1FECDAC800152F80 /* Main.storyboard */,
 				1F83F8EF1FECDAC800152F80 /* Assets.xcassets */,
 				1F83F8F11FECDAC800152F80 /* LaunchScreen.storyboard */,
@@ -487,6 +490,7 @@
 				1FBB25CF1FEF6912006879E4 /* ColorCircle.swift in Sources */,
 				1FBB25D11FEF692F006879E4 /* ColorList.swift in Sources */,
 				1FBB25CB1FEE08D0006879E4 /* Data.swift in Sources */,
+				1F9D8814206E928100373D15 /* LTMController.swift in Sources */,
 				1F83F8E91FECDAC800152F80 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
